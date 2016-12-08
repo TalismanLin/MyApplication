@@ -28,4 +28,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
     compile project(':safe_java_js_webview_bridge_master')
+    compile 'com.jakewharton:butterknife:7.0.0'
 }

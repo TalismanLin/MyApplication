@@ -20,6 +20,8 @@ import com.asiainfo.myapplication.util.SystemBarTintManager;
  */
 public class BaseActivity extends Activity {
 
+	public static String FROM_PAGE = "from_page";
+
 	/* 
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
@@ -59,5 +61,6 @@ public class BaseActivity extends Activity {
 		tintManager.setStatusBarTintEnabled(true);
 		tintManager.setNavigationBarTintColor(android.R.color.transparent);
 	}
-	
+
+
 }
