@@ -1,4 +1,4 @@
-package com.asiainfo.myapplication.widget;
+package com.asiainfo.myapplication.customWebView;
 
 import java.util.Date;
 

@@ -6,8 +6,10 @@ android {
 
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 17
+        targetSdkVersion 19
     }
+
+
 
     buildTypes {
         release {
@@ -15,4 +17,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'lib')
+    compile files('lib/gson-2.3.1.jar')
 }

@@ -2,7 +2,6 @@ package com.asiainfo.myapplication.widget;
 
 import java.util.ArrayList;
 
-import com.jialin.R;
 
 import android.content.Context;
 import android.widget.AdapterView;
@@ -19,6 +18,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+
+import com.asiainfo.myapplication.R;
 
 /**
  * @author Zhu JL

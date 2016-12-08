@@ -13,6 +13,7 @@ import android.webkit.WebView;
 
 import com.google.gson.Gson;
 
+
 public class JsCallJava {
     private final static String TAG = "JsCallJava";
     private final static String RETURN_RESULT_FORMAT = "{\"code\": %d, \"result\": %s}";
