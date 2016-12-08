@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/custom_webview_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <WebView
+        android:id="@+id/custom_webview_wv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/custom_error_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/error_icon"
+            android:gravity="center"
+            android:text="@string/custom_webview_error_text"
+            android:textColor="#8a8a8a"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/custom_refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/custom_webview_error_refresh_text"
+            android:textColor="#8a8a8a"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

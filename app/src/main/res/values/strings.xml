@@ -1,3 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Application</string>
+
+    <string name="app_name">MyTestDemo</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="btn_start">APP启动方式</string>
+    <string name="btn_map">地图定位</string>
+    <string name="btn_percent">百分比布局</string>
+    <string name="btn_submit">Submit动画效果</string>
+    <string name="share">分享</string>
+    <string name="wifiState">Wifi状态:</string>
+    <string name="mobileState">移动数据状态:</string>
+    
+    <string name="searchTitle">搜索</string>
+    <string name="settingsTitle">设置</string>
+    
+    <!-- Web页面 -->
+    <string name="custom_webview_error_text">　出错啦！</string>
+    <string name="custom_webview_error_refresh_text">网络似乎发生异常\n点击刷新</string>
+    
+    <string name="wifi_on">Wifi状态：关闭,点击打开</string>
+    <string name="wifi_off">Wifi状态：打开,点击关闭</string>
+    <string name="data_on">移动数据状态：关闭,点击打开</string>
+    <string name="data_off">移动数据状态：打开,点击关闭</string>
 </resources>
