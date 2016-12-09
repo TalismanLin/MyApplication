@@ -2,8 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.asiainfo.myapplication">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <application
         android:allowBackup="true"
+        android:name=".MyApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -19,6 +32,46 @@
                   android:launchMode="singleInstance"
                   android:configChanges="orientation|keyboard|keyboardHidden"
             />
+        <activity android:name=".mySubmit.MySubmitActivity"
+            android:launchMode="singleInstance"
+                  android:configChanges="orientation|keyboard|keyboardHidden"
+            />
+        <activity
+            android:name=".launchGuide.activity.LauchGuideActivity"
+            android:theme="@style/CustomActionBarTheme"
+            android:parentActivityName=".MainActivity"
+            ></activity>
+        <activity
+            android:name=".launchGuide.activity.splash.SplashActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
+        <activity
+            android:name=".launchGuide.activity.scrollView.ScrollViewActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
+
+        <activity
+            android:name=".launchGuide.activity.SuccessLaunchActivity"
+            android:theme="@style/CustomActionBarTheme"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
+        <activity
+            android:name=".launchGuide.activity.viewFlipper.ViewFlipperActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
+        <activity
+            android:name=".launchGuide.activity.viewPage.GuideActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
 
     </application>
 

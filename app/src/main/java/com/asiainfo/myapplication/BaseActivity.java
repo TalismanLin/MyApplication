@@ -53,7 +53,7 @@ public class BaseActivity extends Activity {
 		win.setAttributes(winParams);
 	}
 	
-	private static void initSystemBar(Activity activity){
+	public static void initSystemBar(Activity activity){
 		if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT){
 			setTranslucentStatus(activity, true);
 		}

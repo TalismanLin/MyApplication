@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    >
+    
+    <android.percent.support.PercentRelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:id="@+id/btn_layout"
+        >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="48%"
+            app:layout_marginLeftPercent="1%"
+            />
+        <Button
+            android:id="@+id/btn_confirm"
+            android:text="Confirm"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@id/btn_cancel"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="48%"
+            app:layout_marginLeftPercent="2%"
+            />
+    </android.percent.support.PercentRelativeLayout>
+
+	<com.asiainfo.myapplication.mySubmit.SubmitView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+	    android:id="@+id/view_submit"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    app:layout_heightPercent="40%w"
+	    app:layout_marginLeftPercent="30%"
+	    app:layout_widthPercent="40%w" 
+	    app:layout_marginBottomPercent="10%"
+	    />
+
+</android.percent.support.PercentRelativeLayout>

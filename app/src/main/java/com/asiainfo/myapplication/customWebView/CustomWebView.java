@@ -65,7 +65,6 @@ public class CustomWebView extends RelativeLayout {
 		errorLL = (LinearLayout) findViewById(R.id.custom_error_ll);
 		errorLL.setVisibility(View.GONE);
 		refreshBtn = (Button) findViewById(R.id.custom_refresh_btn);
-
 		webView.getSettings().setJavaScriptEnabled(true);
 		webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 		// 开启 DOM storage API 功能

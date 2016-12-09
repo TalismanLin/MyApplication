@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.asiainfo.myapplication.customWebView.SimpleWebViewActivity;
+import com.asiainfo.myapplication.launchGuide.activity.LauchGuideActivity;
+import com.asiainfo.myapplication.mySubmit.MySubmitActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -40,12 +42,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Bind(R.id.activity_main)
     LinearLayout mActivityMain;
 
+    private Intent mIntent = new Intent();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initSystemBar(this);
         ButterKnife.bind(this);
         mBrowserStart.setOnClickListener(this);
+        mBtnMySubmit.setOnClickListener(this);
+        mBtnGuideStart.setOnClickListener(this);
     }
 
     @Override
@@ -53,15 +59,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         switch (v.getId()){
             case R.id.browserStart:
-                startBrowser();
+                mIntent.setClass(this, SimpleWebViewActivity.class);
+                mIntent.putExtra(FROM_PAGE, "HOME");
+                startActivity(mIntent);
+                break;
+            case R.id.btnMySubmit:
+                mIntent.setClass(this, MySubmitActivity.class);
+                mIntent.putExtra(FROM_PAGE, "HOME");
+                startActivity(mIntent);
+                break;
+            case R.id.btnGuideStart:
+                Intent mIntent = new Intent();
+                mIntent.setClass(this, LauchGuideActivity.class);
+                startActivity(mIntent);
                 break;
         }
-    }
-
-    private void startBrowser(){
-        Intent mIntent = new Intent(this, SimpleWebViewActivity.class);
-        mIntent.putExtra(FROM_PAGE, "HOME");
-        startActivity(mIntent);
     }
 
 }

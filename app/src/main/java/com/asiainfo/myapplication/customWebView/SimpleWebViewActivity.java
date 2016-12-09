@@ -29,6 +29,6 @@ public class SimpleWebViewActivity extends BaseActivity {
 
             }
         });
-        mMyWebView.loadUrl("http://www.baidu.com");
+        mMyWebView.loadUrl("https://www.baidu.com/");
     }
 }

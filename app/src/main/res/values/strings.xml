@@ -16,7 +16,7 @@
     <string name="settingsTitle">设置</string>
     
     <!-- Web页面 -->
-    <string name="custom_webview_error_text">　出错啦！</string>
+    <string name="custom_webview_error_text">出错啦！</string>
     <string name="custom_webview_error_refresh_text">网络似乎发生异常\n点击刷新</string>
     
     <string name="wifi_on">Wifi状态：关闭,点击打开</string>

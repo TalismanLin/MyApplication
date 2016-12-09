@@ -11,6 +11,7 @@
         android:id="@+id/capture"
         android:layout_width="match_parent"
         android:layout_height="120dp"
+        android:visibility="gone"
         />
     <com.asiainfo.myapplication.customWebView.CustomWebView
         android:id="@+id/myWebView"
