@@ -5,12 +5,6 @@
  */
 package com.asiainfo.myapplication.launchGuide.activity.viewPage;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -23,6 +17,9 @@ import com.asiainfo.myapplication.BaseActivity;
 import com.asiainfo.myapplication.MyApplication;
 import com.asiainfo.myapplication.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Zhu JL
  *
@@ -33,7 +30,7 @@ public class GuideActivity extends BaseActivity implements OnClickListener, OnPa
 	
 	private ViewPager vPager;
 	private ViewPagerAdapter vpAdapter;
-	private List<View> views;
+	private List<ImageView> views;
 	
 	private final int[] pics = {R.drawable.p2,R.drawable.p3,R.drawable.p4,R.drawable.p5};
 	
@@ -53,12 +50,10 @@ public class GuideActivity extends BaseActivity implements OnClickListener, OnPa
 		
 		app = (MyApplication) this.getApplication();
 		app.pushActivity(this);
-		
-		views = new ArrayList<View>();
-		
+
 		initViews();
 		vPager = (ViewPager) findViewById(R.id.viewpager);
-		vpAdapter = new ViewPagerAdapter(views);	
+		vpAdapter = new ViewPagerAdapter(views);
 		vPager.setAdapter(vpAdapter);
 		vPager.setOnPageChangeListener(this);
 		initDots();
@@ -66,9 +61,11 @@ public class GuideActivity extends BaseActivity implements OnClickListener, OnPa
 	
 	
 	
+
 	private void initViews(){
-		LinearLayout.LayoutParams mParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,  
-                LinearLayout.LayoutParams.WRAP_CONTENT);
+		views = new ArrayList<ImageView>();
+		LinearLayout.LayoutParams mParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
 		for (int i = 0 ; i < pics.length; i++){
 			ImageView iv = new ImageView(this);
 			iv.setLayoutParams(mParams);

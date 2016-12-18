@@ -19,31 +19,37 @@
         android:gravity="center"
         android:textColor="@android:color/white"
         android:text="APP常用的引导方式"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        tools:ignore="HardcodedText"/>
 
     <Button
         android:id="@+id/btnSplash"
         style="@style/btnLaunch"
-        android:text="方式一:Splash" />
+        android:text="方式一:Splash"
+        tools:ignore="HardcodedText"/>
     
     <Button
         android:id="@+id/btnViewPage"
         style="@style/btnLaunch"
+        tools:ignore="HardcodedText"
         android:text="方式二:ViewPage" />
     
     <Button
         android:id="@+id/btnViewFlipper"
         style="@style/btnLaunch"
+        tools:ignore="HardcodedText"
         android:text="方式三:ViewFlipper" />
     
     <Button
         android:id="@+id/btnScrollView"
         style="@style/btnLaunch"
+        tools:ignore="HardcodedText"
         android:text="方式四:ScrollView" />
     
     <Button
         android:id="@+id/btnWebView"
         style="@style/btnLaunch"
+        tools:ignore="HardcodedText"
         android:text="方式五:WebView" />
 
 </LinearLayout>

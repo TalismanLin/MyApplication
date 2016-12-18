@@ -69,8 +69,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(mIntent);
                 break;
             case R.id.btnGuideStart:
-                Intent mIntent = new Intent();
-                mIntent.setClass(this, LauchGuideActivity.class);
+                mIntent = new Intent(this, LauchGuideActivity.class);
+                mIntent.putExtra(FROM_PAGE, "HOME");
                 startActivity(mIntent);
                 break;
         }
