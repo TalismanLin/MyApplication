@@ -92,7 +92,12 @@
             android:id="@+id/browserStart"
             android:text="BrowserStart"
             />
-
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/animations"
+            android:text="Animations"
+            />
     </LinearLayout>
 
 </ScrollView>

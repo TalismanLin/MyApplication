@@ -9,6 +9,7 @@ package com.asiainfo.myapplication;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -18,7 +19,7 @@ import com.asiainfo.myapplication.util.SystemBarTintManager;
  * @author Zhu JL
  *
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends AppCompatActivity {
 
 	public static String FROM_PAGE = "from_page";
 

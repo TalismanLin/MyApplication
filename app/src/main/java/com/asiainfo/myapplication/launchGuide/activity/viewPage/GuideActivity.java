@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
-import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import com.asiainfo.myapplication.BaseActivity;
 import com.asiainfo.myapplication.MyApplication;
 import com.asiainfo.myapplication.R;
+import com.asiainfo.myapplication.util.BitmapUtil;
 
 /**
  * @author Zhu JL
@@ -40,11 +41,10 @@ public class GuideActivity extends BaseActivity implements OnClickListener, OnPa
 	private ImageView[] dots;
 	
 	private int currentIndex;
-	
+
 	/* 
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
 	 */
-	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -65,14 +65,16 @@ public class GuideActivity extends BaseActivity implements OnClickListener, OnPa
 	}
 	
 	
-	
 	private void initViews(){
-		LinearLayout.LayoutParams mParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,  
-                LinearLayout.LayoutParams.WRAP_CONTENT);
+		Bitmap bitmap = null;
+		LinearLayout.LayoutParams mParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
 		for (int i = 0 ; i < pics.length; i++){
 			ImageView iv = new ImageView(this);
 			iv.setLayoutParams(mParams);
-			iv.setImageResource(pics[i]);
+			bitmap = BitmapUtil.readBitMap(GuideActivity.this, pics[i]);
+			iv.setImageBitmap(bitmap);
+			iv.setScaleType(ImageView.ScaleType.FIT_XY);
 			views.add(iv);
 		}
 		

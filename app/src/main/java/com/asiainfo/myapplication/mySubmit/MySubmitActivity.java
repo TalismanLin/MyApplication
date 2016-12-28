@@ -39,7 +39,7 @@ public class MySubmitActivity extends BaseActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submit_main);
         ButterKnife.bind(this);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+//        getActionBar().setDisplayHomeAsUpEnabled(true);
         initView();
         initButton();
     }

@@ -32,6 +32,7 @@ public class WebViewActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.webview);
 		myWebView  = (WebView) findViewById(R.id.myWebView);
 		myWebView.getSettings().setJavaScriptEnabled(true);
