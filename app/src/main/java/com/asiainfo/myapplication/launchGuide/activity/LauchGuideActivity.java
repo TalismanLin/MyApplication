@@ -4,7 +4,6 @@
 package com.asiainfo.myapplication.launchGuide.activity;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -38,13 +37,12 @@ public class LauchGuideActivity extends BaseActivity implements OnClickListener 
     Button mBtnScrollView;
     @Bind(R.id.btnWebView)
     Button mBtnWebView;
-    private Intent mIntent = new Intent();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activtity_guide_main);
         ButterKnife.bind(this);
         mBtnSplash.setOnClickListener(this);
@@ -52,6 +50,7 @@ public class LauchGuideActivity extends BaseActivity implements OnClickListener 
         mBtnViewFlipper.setOnClickListener(this);
         mBtnScrollView.setOnClickListener(this);
         mBtnWebView.setOnClickListener(this);
+
     }
 
     /* (non-Javadoc)
@@ -59,20 +58,22 @@ public class LauchGuideActivity extends BaseActivity implements OnClickListener 
      */
     @Override
     public void onClick(View v) {
+        Intent mIntent = new Intent();
+//        // TODO Auto-generated method stub
         if (v == mBtnSplash) {
-            mIntent.setClass(LauchGuideActivity.this, SplashActivity.class);
+            mIntent.setClass(this, SplashActivity.class);
             startActivity(mIntent);
         } else if (v == mBtnViewPage) {
-            mIntent.setClass(LauchGuideActivity.this, GuideActivity.class);
+            mIntent.setClass(this, GuideActivity.class);
             startActivity(mIntent);
         } else if (v == mBtnViewFlipper) {
-            mIntent.setClass(LauchGuideActivity.this, ViewFlipperActivity.class);
+            mIntent.setClass(this, ViewFlipperActivity.class);
             startActivity(mIntent);
         } else if (v == mBtnScrollView) {
-            mIntent.setClass(LauchGuideActivity.this, ScrollViewActivity.class);
+            mIntent.setClass(this, ScrollViewActivity.class);
             startActivity(mIntent);
         } else if (v == mBtnWebView) {
-            mIntent.setClass(LauchGuideActivity.this, WebViewActivity.class);
+            mIntent.setClass(this, WebViewActivity.class);
             startActivity(mIntent);
         }
     }

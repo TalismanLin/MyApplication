@@ -33,13 +33,13 @@ public class BaseActivity extends AppCompatActivity {
 //		if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT){
 //			setTranslucentStatus(this, true);
 //		}
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {  
-            Window window = getWindow();  
-            // Translucent status bar  
-            window.setFlags(  
-                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,  
-                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);  
-        } 
+//		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            Window window = getWindow();
+//            // Translucent status bar
+//            window.setFlags(
+//                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+//                    WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//        }
 	}
 	
 	private static void setTranslucentStatus(Activity activity,boolean on){

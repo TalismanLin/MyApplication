@@ -31,25 +31,25 @@
     <Button
         android:id="@+id/btnViewPage"
         style="@style/btnLaunch"
-        android:text="方式二:ViewPage"
-        tools:ignore="HardcodedText"/>
+        tools:ignore="HardcodedText"
+        android:text="方式二:ViewPage" />
     
     <Button
         android:id="@+id/btnViewFlipper"
         style="@style/btnLaunch"
-        android:text="方式三:ViewFlipper"
-        tools:ignore="HardcodedText"/>
+        tools:ignore="HardcodedText"
+        android:text="方式三:ViewFlipper" />
     
     <Button
         android:id="@+id/btnScrollView"
         style="@style/btnLaunch"
-        android:text="方式四:ScrollView"
-        tools:ignore="HardcodedText"/>
+        tools:ignore="HardcodedText"
+        android:text="方式四:ScrollView" />
     
     <Button
         android:id="@+id/btnWebView"
         style="@style/btnLaunch"
-        android:text="方式五:WebView"
-        tools:ignore="HardcodedText"/>
+        tools:ignore="HardcodedText"
+        android:text="方式五:WebView" />
 
 </LinearLayout>

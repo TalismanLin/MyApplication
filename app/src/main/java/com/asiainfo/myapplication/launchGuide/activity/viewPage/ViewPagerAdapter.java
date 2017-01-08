@@ -5,13 +5,14 @@
  */
 package com.asiainfo.myapplication.launchGuide.activity.viewPage;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.ImageView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Zhu JL
@@ -19,15 +20,15 @@ import android.view.View;
  */
 public class ViewPagerAdapter extends PagerAdapter{
 	
-	private List<View> views;
+	private List<ImageView> views;
 	
 	
 	
 	
 	//	 Constructor
-	public ViewPagerAdapter(List<View> views){
+	public ViewPagerAdapter(List<ImageView> views){
 		if( views == null){
-			this.views = new ArrayList<View>();
+			this.views = new ArrayList<ImageView>();
 		}
 		else {
 			this.views = views;

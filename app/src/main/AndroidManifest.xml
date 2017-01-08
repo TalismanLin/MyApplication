@@ -2,25 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.asiainfo.myapplication">
 
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="android.permission.GET_TASKS"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <application
-        android:name=".MyApplication"
         android:allowBackup="true"
+        android:name=".MyApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -29,55 +29,53 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".customWebView.SimpleWebViewActivity"
-            android:configChanges="orientation|keyboard|keyboardHidden"
-            android:launchMode="singleInstance"/>
-        <activity
-            android:name=".mySubmit.MySubmitActivity"
-            android:configChanges="orientation|keyboard|keyboardHidden"
-            android:launchMode="singleInstance"/>
+        <activity android:name=".customWebView.SimpleWebViewActivity"
+                  android:launchMode="singleInstance"
+                  android:configChanges="orientation|keyboard|keyboardHidden"
+            />
+        <activity android:name=".mySubmit.MySubmitActivity"
+            android:launchMode="singleInstance"
+                  android:configChanges="orientation|keyboard|keyboardHidden"
+            />
         <activity
             android:name=".launchGuide.activity.LauchGuideActivity"
+            android:theme="@style/CustomActionBarTheme"
             android:launchMode="singleInstance"
-            android:theme="@style/CustomActionBarTheme"/>
+            android:parentActivityName=".MainActivity"
+            ></activity>
         <activity
             android:name=".launchGuide.activity.splash.SplashActivity"
-            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
         <activity
             android:name=".launchGuide.activity.scrollView.ScrollViewActivity"
-            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
+
         <activity
             android:name=".launchGuide.activity.SuccessLaunchActivity"
-            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:theme="@style/CustomActionBarTheme"
             android:screenOrientation="portrait"
-            android:theme="@style/CustomActionBarTheme"/>
-        <activity
-            android:name=".launchGuide.activity.webView.WebViewActivity"
             android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            ></activity>
         <activity
             android:name=".launchGuide.activity.viewFlipper.ViewFlipperActivity"
-            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
         <activity
             android:name=".launchGuide.activity.viewPage.GuideActivity"
-            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
-        <activity
-            android:name=".loadingView.LoadingViewActivity"
-            android:theme="@style/AppTheme"/>
-        <activity
-            android:name=".animations.MainAnimationActivity"
-            android:label="@string/title_activity_main_animation"
-            android:theme="@style/MaterialAnimations">
-        </activity>
+            android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            ></activity>
+
     </application>
 
 </manifest>
