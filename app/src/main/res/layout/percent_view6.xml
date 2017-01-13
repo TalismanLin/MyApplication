@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.percent.support.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.percent.support.PercentLinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView 
+               	android:layout_width="0dp"
+               	android:layout_height="0dp"
+               	android:background="#ff44aacc"
+               	android:gravity="center"
+               	android:text="width:60%, height:5%, ts:3%"
+               	android:textColor="#ffffff"
+               	app:layout_heightPercent="5%"
+               	app:layout_marginBottomPercent="5%"
+               	app:layout_textSizePercent="3%"
+               	app:layout_widthPercent="60%"
+               	/>
+            <TextView 
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#ff4400cc"
+                android:gravity="center"
+                android:text="width:70%, height:10%"
+                android:textColor="#ffffff"
+                app:layout_heightPercent="10%"
+                app:layout_marginBottomPercent="5%"
+                app:layout_widthPercent="70%"
+                />
+            <TextView 
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#ff4a0dd0"
+                android:gravity="center"
+                android:text="width:80%, height:15%"
+                android:textColor="#ffffff"
+                app:layout_heightPercent="15%h"
+                app:layout_marginLeftPercent="10%w"
+                app:layout_marginRightPercent="10%w"
+                app:layout_widthPercent="80%"
+                app:layout_marginBottomPercent="8%w"
+                />
+            
+        </android.percent.support.PercentLinearLayout>
+    </ScrollView>
+    
+</android.percent.support.PercentRelativeLayout>

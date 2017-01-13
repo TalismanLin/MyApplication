@@ -15,12 +15,12 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <application
-        android:allowBackup="true"
         android:name=".MyApplication"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:largeHeap="true"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -29,55 +29,72 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".percentView.PercentLayoutActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"
+            ></activity>
+
+        <activity
+            android:name=".percentView.ItemActivity"
+            android:parentActivityName=".percentView.PercentLayoutActivity"
+            ></activity>
         <activity android:name=".customWebView.SimpleWebViewActivity"
-                  android:launchMode="singleInstance"
                   android:configChanges="orientation|keyboard|keyboardHidden"
+                  android:launchMode="singleInstance"
             />
         <activity android:name=".mySubmit.MySubmitActivity"
-            android:launchMode="singleInstance"
-                  android:configChanges="orientation|keyboard|keyboardHidden"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+                  android:launchMode="singleInstance"
             />
         <activity
             android:name=".launchGuide.activity.LauchGuideActivity"
-            android:theme="@style/CustomActionBarTheme"
             android:launchMode="singleInstance"
             android:parentActivityName=".MainActivity"
+            android:theme="@style/CustomActionBarTheme"
             ></activity>
         <activity
             android:name=".launchGuide.activity.splash.SplashActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            android:screenOrientation="portrait"
             android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             ></activity>
         <activity
             android:name=".launchGuide.activity.scrollView.ScrollViewActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            android:screenOrientation="portrait"
             android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             ></activity>
 
         <activity
             android:name=".launchGuide.activity.SuccessLaunchActivity"
-            android:theme="@style/CustomActionBarTheme"
-            android:screenOrientation="portrait"
             android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomActionBarTheme"
             ></activity>
         <activity
             android:name=".launchGuide.activity.viewFlipper.ViewFlipperActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            android:screenOrientation="portrait"
             android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             ></activity>
         <activity
             android:name=".launchGuide.activity.viewPage.GuideActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:launchMode="singleInstance"
-            android:screenOrientation="portrait"
             android:parentActivityName=".launchGuide.activity.LauchGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             ></activity>
             <activity android:name=".animations.MainAnimationActivity"
                 android:theme="@style/MaterialAnimations"
-                ></activity>
+                />
+            <activity
+                android:name=".animations.TransitionActivity1"
+                android:theme="@style/MaterialAnimations.Red" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
     </application>
 
 </manifest>
