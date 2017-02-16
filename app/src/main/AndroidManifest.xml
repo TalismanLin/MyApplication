@@ -85,16 +85,30 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             ></activity>
+        <activity android:name=".pickView.PickViewActivity"></activity>
             <activity android:name=".animations.MainAnimationActivity"
                 android:theme="@style/MaterialAnimations"
                 />
             <activity
                 android:name=".animations.TransitionActivity1"
-                android:theme="@style/MaterialAnimations.Red" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version"/>
+                android:parentActivityName=".animations.MainAnimationActivity"
+                android:theme="@style/MaterialAnimations.Red" />
+            <activity android:name=".animations.TransitionActivity2"
+                      android:parentActivityName=".animations.TransitionActivity1"
+                android:theme="@style/MaterialAnimations.Red"
+                />
+        <activity android:name=".animations.SharedElementActivity"
+                  android:parentActivityName=".animations.MainAnimationActivity"
+            android:theme="@style/MaterialAnimations.Blue"
+            />
+        <activity android:name=".animations.AnimationActivity"
+                  android:parentActivityName=".animations.MainAnimationActivity"
+            android:theme="@style/MaterialAnimations.Green"
+            />
+        <activity android:name=".animations.RevealActivity"
+            android:parentActivityName=".animations.MainAnimationActivity"
+                  android:theme="@style/MaterialAnimations.Yellow"
+            />
     </application>
 
 </manifest>

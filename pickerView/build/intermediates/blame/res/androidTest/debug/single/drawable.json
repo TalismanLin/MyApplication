@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\AS\\ASworkspace\\MyApplication\\pickerView\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_above_timepicker.png",
+        "source": "D:\\AS\\ASworkspace\\MyApplication\\pickerView\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_above_timepicker.png"
+    },
+    {
+        "merged": "D:\\AS\\ASworkspace\\MyApplication\\pickerView\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_line_timepicker.png",
+        "source": "D:\\AS\\ASworkspace\\MyApplication\\pickerView\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_line_timepicker.png"
+    },
+    {
+        "merged": "D:\\AS\\ASworkspace\\MyApplication\\pickerView\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\wheel_val.xml",
+        "source": "D:\\AS\\ASworkspace\\MyApplication\\pickerView\\build\\intermediates\\bundles\\debug\\res\\drawable\\wheel_val.xml"
+    },
+    {
+        "merged": "D:\\AS\\ASworkspace\\MyApplication\\pickerView\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\wheel_timebtn.xml",
+        "source": "D:\\AS\\ASworkspace\\MyApplication\\pickerView\\build\\intermediates\\bundles\\debug\\res\\drawable\\wheel_timebtn.xml"
+    }
+]

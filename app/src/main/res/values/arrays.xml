@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_items">
+        <item>@string/btn_start</item>
+        <item>@string/btn_map</item>
+        <item>@string/btn_percent</item>
+        <item>@string/btn_submit</item>
+        <item>HoloColorPicker</item>
+        <item>LoadingView</item>
+        <item>PickerView</item>
+        <item>ViewSwitcher</item>
+        <item>ShareSDK</item>
+        <item>dataSwitch</item>
+        <item>BrowserStart</item>
+        <item>Animations</item>
+    </string-array>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            style="@style/MaterialAnimations.TextAppearance.Title"
+            android:background="?android:colorPrimary"
+            android:elevation="@dimen/elevation_header"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/title"
+                android:gravity="center_vertical"
+                style="@style/MaterialAnimations.TextAppearance.Title"
+                android:transitionName="@string/sample_blue_title"
+                />
+        </android.support.v7.widget.Toolbar>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MaterialAnimations.Text.Body"
+            android:text="Toolbar title is a shared element between MainActivity and this activity"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sample2_content"
+            />
+    </LinearLayout>

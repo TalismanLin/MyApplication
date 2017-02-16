@@ -42,7 +42,7 @@ public class LauchGuideActivity extends BaseActivity implements OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+//        getActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activtity_guide_main);
         ButterKnife.bind(this);
         mBtnSplash.setOnClickListener(this);

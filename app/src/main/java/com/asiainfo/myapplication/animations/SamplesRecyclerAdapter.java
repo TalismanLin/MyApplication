@@ -42,7 +42,7 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
     }
 
     @Override
-    public void onBindViewHolder(SamplesViewHolder holder, final int position) {
+    public void onBindViewHolder(final SamplesViewHolder holder, final int position) {
         final Sample sample = mSampleList.get(holder.getAdapterPosition());
         holder.mTitle.setText(mSampleList.get(position).getName());
         DrawableCompat.setTint(holder.mContent.getDrawable(),mSampleList.get(position).getColor());
@@ -54,10 +54,13 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
                         transitionToActivity(TransitionActivity1.class, sample);
                         break;
                     case 1:
+                        transitionToActivity(SharedElementActivity.class, holder, sample);
                         break;
                     case 2:
+                        transitionToActivity(AnimationActivity.class, sample);
                         break;
                     case 3:
+                        transitionToActivity(RevealActivity.class, holder, sample, R.string.transition_reveal1);
                         break;
                 }
             }
@@ -111,7 +114,7 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
     private void startActivity(Class target, Pair<View, String>[] pairs, Sample sample){
         Intent mIntent = new Intent(mActivity, target);
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(mActivity, pairs);
-        mIntent.putExtra(BaseActivity.SAMPLE_EXTRA, sample);
+        mIntent.putExtra(BaseActivity.EXTRA_SAMPLE, sample);
         mActivity.startActivity(mIntent, options.toBundle());
 
     }

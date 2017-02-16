@@ -7,18 +7,21 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* lib\
-* lib\gson-2.3.jar
+* README.md
+* preview\
+* preview\MainActivity.java
+* preview\pickerdemo.gif
+* proguard-project.txt
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
-* AndroidManifest.xml => safe_java_js_webview_bridge_master\src\main\AndroidManifest.xml
-* assets\ => safe_java_js_webview_bridge_master\src\main\assets
-* res\ => safe_java_js_webview_bridge_master\src\main\res
-* src\ => safe_java_js_webview_bridge_master\src\main\java\
+* AndroidManifest.xml => pickerView\src\main\AndroidManifest.xml
+* assets\ => pickerView\src\main\assets
+* res\ => pickerView\src\main\res\
+* src\ => pickerView\src\main\java\
 
 Next Steps:
 -----------
