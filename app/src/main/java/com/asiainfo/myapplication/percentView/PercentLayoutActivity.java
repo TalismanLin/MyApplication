@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.asiainfo.myapplication.BaseActivity;
 import com.asiainfo.myapplication.R;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -30,10 +31,9 @@ import butterknife.ButterKnife;
  */
 public class PercentLayoutActivity extends BaseActivity {
 
-	@ViewInject(R.id.listView)
-	private ListView mListView;
-	
-	
+	@Bind(R.id.listView)
+	ListView mListView;
+
 	private LayoutInflater mInflater;
 	
 	

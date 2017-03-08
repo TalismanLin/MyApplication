@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.asiainfo.myapplication.BaseActivity;
 import com.asiainfo.myapplication.R;
 import com.asiainfo.myapplication.util.TransitionHelper;
 
@@ -36,11 +38,12 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
     }
     @Override
     public SamplesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new SamplesViewHolder(mInflater.inflate(R.layout.row_sample, null));
+        return new SamplesViewHolder(mInflater.inflate(R.layout.row_sample, parent, false));
     }
 
     @Override
     public void onBindViewHolder(SamplesViewHolder holder, final int position) {
+        final Sample sample = mSampleList.get(holder.getAdapterPosition());
         holder.mTitle.setText(mSampleList.get(position).getName());
         DrawableCompat.setTint(holder.mContent.getDrawable(),mSampleList.get(position).getColor());
         holder.mLayout.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +51,7 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
             public void onClick(View v) {
                 switch (position){
                     case 0:
-
+                        transitionToActivity(TransitionActivity1.class, sample);
                         break;
                     case 1:
                         break;
@@ -81,6 +84,7 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
 
         public SamplesViewHolder(View rootView) {
             super(rootView);
+            mLayout = (LinearLayout) rootView.findViewById(R.id.sample_layout);
             mTitle = (TextView) rootView.findViewById(R.id.sample_name);
             mContent = (ImageView) rootView.findViewById(R.id.sample_icon);
         }
@@ -107,7 +111,7 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
     private void startActivity(Class target, Pair<View, String>[] pairs, Sample sample){
         Intent mIntent = new Intent(mActivity, target);
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(mActivity, pairs);
-        mIntent.putExtra("sample", sample);
+        mIntent.putExtra(BaseActivity.SAMPLE_EXTRA, sample);
         mActivity.startActivity(mIntent, options.toBundle());
 
     }

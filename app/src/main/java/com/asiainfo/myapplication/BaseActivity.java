@@ -7,13 +7,18 @@ package com.asiainfo.myapplication;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.asiainfo.myapplication.util.SystemBarTintManager;
+import com.asiainfo.myapplication.util.TransitionHelper;
 
 /**
  * @author Zhu JL
@@ -22,6 +27,12 @@ import com.asiainfo.myapplication.util.SystemBarTintManager;
 public class BaseActivity extends AppCompatActivity {
 
 	public static String FROM_PAGE = "from_page";
+
+	public static final String EXTRA_SAMPLE = "sample";
+	public static final String EXTRA_TYPE = "type";
+
+	public static final int TYPE_PROGRAMMATICALLY = 0;
+	public static final int TYPE_XML = 1;
 
 	/* 
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -63,5 +74,11 @@ public class BaseActivity extends AppCompatActivity {
 		tintManager.setNavigationBarTintColor(android.R.color.transparent);
 	}
 
+
+	public void transitionTo(Intent i) {
+		final Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants(this, true);
+		ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(this, pairs);
+		startActivity(i, transitionActivityOptions.toBundle());
+	}
 
 }

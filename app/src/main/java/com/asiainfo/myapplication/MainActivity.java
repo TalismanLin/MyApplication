@@ -11,6 +11,7 @@ import com.asiainfo.myapplication.customWebView.SimpleWebViewActivity;
 import com.asiainfo.myapplication.launchGuide.activity.LauchGuideActivity;
 import com.asiainfo.myapplication.loadingView.LoadingViewActivity;
 import com.asiainfo.myapplication.mySubmit.MySubmitActivity;
+import com.asiainfo.myapplication.percentView.PercentLayoutActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -53,6 +54,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         initSystemBar(this);
         ButterKnife.bind(this);
+        mBtnPercentView.setOnClickListener(this);
         mBrowserStart.setOnClickListener(this);
         mBtnMySubmit.setOnClickListener(this);
         mBtnGuideStart.setOnClickListener(this);
@@ -85,6 +87,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.animations:
                 mIntent = new Intent(this, MainAnimationActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btnPercentView:
+                mIntent = new Intent(this, PercentLayoutActivity.class);
                 startActivity(mIntent);
                 break;
         }

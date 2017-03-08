@@ -1,6 +1,6 @@
 package com.asiainfo.myapplication.loadingView;
 
-import com.jialin.R;
+
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.asiainfo.myapplication.R;
 
 /**
  * 类似螺纹的加载view<br></>
