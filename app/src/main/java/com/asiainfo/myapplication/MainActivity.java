@@ -57,6 +57,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mBtnMySubmit.setOnClickListener(this);
         mBtnGuideStart.setOnClickListener(this);
         mBtnLoadingView.setOnClickListener(this);
+        mAnimations.setOnClickListener(this);
     }
 
     @Override

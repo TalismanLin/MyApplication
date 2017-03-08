@@ -6,6 +6,13 @@
 package com.asiainfo.myapplication;
 
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.SharedPreferences;
+
+import com.asiainfo.myapplication.common.Const;
+import com.asiainfo.myapplication.handler.CrashHandler;
+
 import java.security.InvalidAlgorithmParameterException;
 import java.security.KeyPairGenerator;
 import java.security.KeyStore;
@@ -15,12 +22,6 @@ import java.security.NoSuchProviderException;
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.ArrayList;
 import java.util.List;
-
-import android.app.Activity;
-import android.app.Application;
-import android.content.SharedPreferences;
-
-import com.asiainfo.myapplication.common.Const;
 
 /**
  * @author Zhu JL
@@ -35,6 +36,8 @@ public class MyApplication extends Application{
 	private List<Activity> activityList;
 	
 	private SharedPreferences spFile;
+
+	private CrashHandler crashHandler;
 	
 	/* 
 	 * @see android.app.Application#onCreate()
@@ -43,6 +46,8 @@ public class MyApplication extends Application{
 	public void onCreate() {
 		// TODO Auto-generated method stub
 		super.onCreate();
+		CrashHandler crashHandler =CrashHandler.getInstance();
+		crashHandler.init(getApplicationContext());
 		if(activityList == null){
 			activityList = new ArrayList<Activity>();
 		}
