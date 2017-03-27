@@ -13,5 +13,6 @@
         <item>dataSwitch</item>
         <item>BrowserStart</item>
         <item>Animations</item>
+        <item>SimpleWebView</item>
     </string-array>
 </resources>

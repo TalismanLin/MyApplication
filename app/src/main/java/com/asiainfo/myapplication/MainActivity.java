@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.asiainfo.myapplication.animations.AnimationActivity;
 import com.asiainfo.myapplication.animations.MainAnimationActivity;
+import com.asiainfo.myapplication.customWebView.SimpleWebViewActivity;
 import com.asiainfo.myapplication.launchGuide.activity.LauchGuideActivity;
 import com.asiainfo.myapplication.mySubmit.MySubmitActivity;
 import com.asiainfo.myapplication.percentView.PercentLayoutActivity;
@@ -127,6 +128,8 @@ public class MainActivity extends BaseActivity {
                     case 11:
                         startActivity(MainAnimationActivity.class);
                         break;
+                    case 12:
+                        startActivity(SimpleWebViewActivity.class);
                     default:
                         break;
                 }
