@@ -10,10 +10,12 @@ import java.io.Serializable;
 
 public class Sample implements Serializable{
 
+    @ColorRes
     public int getColor() {
         return color;
     }
 
+    @ColorRes
     final int color;
 
     public String getName() {

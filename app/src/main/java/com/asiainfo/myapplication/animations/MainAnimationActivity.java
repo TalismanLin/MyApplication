@@ -49,6 +49,7 @@ public class MainAnimationActivity extends BaseActivity {
 
     private void setupToolbar(){
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
