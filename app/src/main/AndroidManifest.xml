@@ -90,8 +90,33 @@
                 />
             <activity
                 android:name=".animations.TransitionActivity1"
-                android:theme="@style/MaterialAnimations.Red" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+                android:theme="@style/MaterialAnimations.Red"/>
+        <activity
+            android:name=".animations.TransitionActivity2"
+            android:theme="@style/MaterialAnimations.Red"
+            />
+        <activity
+            android:name=".animations.TransitionActivity3"
+            android:theme="@style/MaterialAnimations.Red"
+            />
+        <activity
+            android:name=".animations.AnimationActivity1"
+            android:theme="@style/MaterialAnimations.Green"
+            />
+        <activity
+            android:name=".animations.AnimationActivity2"
+            android:theme="@style/MaterialAnimations.Green"
+            />
+        <activity
+            android:name=".animations.SharedElementActivity"
+            android:theme="@style/MaterialAnimations.Blue"
+            />
+        <activity
+            android:name=".animations.RevealActivity"
+            android:theme="@style/MaterialAnimations.Yellow"
+            />
+
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
