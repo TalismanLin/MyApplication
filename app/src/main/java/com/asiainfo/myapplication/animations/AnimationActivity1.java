@@ -1,5 +1,6 @@
 package com.asiainfo.myapplication.animations;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.Toolbar;
@@ -82,7 +83,9 @@ public class AnimationActivity1 extends BaseActivity {
                 changePosition();
                 break;
             case R.id.sample3_button3:
-//                Intent mIntent = new Intent(AnimationActivity1.this, AnimationActivity2.class);
+                Intent mIntent = new Intent(AnimationActivity1.this, AnimationActivity2.class);
+                mIntent.putExtra(EXTRA_SAMPLE, sample);
+                startActivity(mIntent);
                 break;
 
         }
