@@ -12,6 +12,7 @@ import com.asiainfo.myapplication.launchGuide.activity.LauchGuideActivity;
 import com.asiainfo.myapplication.loadingView.LoadingViewActivity;
 import com.asiainfo.myapplication.mySubmit.MySubmitActivity;
 import com.asiainfo.myapplication.percentView.PercentLayoutActivity;
+import com.asiainfo.myapplication.pickView.PickViewActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -60,6 +61,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mBtnGuideStart.setOnClickListener(this);
         mBtnLoadingView.setOnClickListener(this);
         mAnimations.setOnClickListener(this);
+        mBtnPickerView.setOnClickListener(this);
     }
 
     @Override
@@ -91,6 +93,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.btnPercentView:
                 mIntent = new Intent(this, PercentLayoutActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.btnPickerView:
+                mIntent = new Intent(this, PickViewActivity.class);
                 startActivity(mIntent);
                 break;
         }
