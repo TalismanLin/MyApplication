@@ -1,5 +1,7 @@
 package com.asiainfo.myapplication.animations;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -39,12 +41,14 @@ public class MainAnimationActivity extends BaseActivity {
         setupLayout();
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void setupAnimations(){
         Slide slideTransition = new Slide();
         slideTransition.setSlideEdge(Gravity.LEFT);
         slideTransition.setDuration(getResources().getInteger(R.integer.anim_duration_medium));
         getWindow().setReenterTransition(slideTransition);
         getWindow().setExitTransition(slideTransition);
+
     }
 
     private void setupToolbar(){
