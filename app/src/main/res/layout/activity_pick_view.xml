@@ -36,5 +36,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
+        android:id="@+id/result"
         />
 </LinearLayout>

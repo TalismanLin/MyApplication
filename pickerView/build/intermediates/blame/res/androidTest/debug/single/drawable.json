@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/drawable/bg_above_timepicker.png",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/drawable/bg_above_timepicker.png"
+    },
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/drawable/wheel_val.xml",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/drawable/wheel_val.xml"
+    },
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/drawable/bg_line_timepicker.png",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/drawable/bg_line_timepicker.png"
+    },
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/drawable/wheel_timebtn.xml",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/drawable/wheel_timebtn.xml"
+    }
+]

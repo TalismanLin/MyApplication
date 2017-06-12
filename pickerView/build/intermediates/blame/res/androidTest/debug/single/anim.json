@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/anim/timepicker_anim_exit_bottom.xml",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/anim/timepicker_anim_exit_bottom.xml"
+    },
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/anim/timepicker_anim_enter_bottom.xml",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/anim/timepicker_anim_enter_bottom.xml"
+    }
+]

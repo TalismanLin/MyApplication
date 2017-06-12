@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/layout/include_optionspicker.xml",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/layout/include_optionspicker.xml"
+    },
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/layout/include_timepicker.xml",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/layout/include_timepicker.xml"
+    },
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/layout/pw_time.xml",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/layout/pw_time.xml"
+    },
+    {
+        "merged": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/res/merged/androidTest/debug/layout/pw_options.xml",
+        "source": "/Users/Talisman/AndroidStudioProjects/MyApplication/pickerView/build/intermediates/bundles/debug/res/layout/pw_options.xml"
+    }
+]
