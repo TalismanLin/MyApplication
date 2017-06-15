@@ -52,7 +52,6 @@ public class MyApplication extends Application{
 			activityList = new ArrayList<Activity>();
 		}
 		spFile = getSharedPreferences(Const.SP_FILE_NAME, MODE_PRIVATE);
-		
 	}
 	
 	

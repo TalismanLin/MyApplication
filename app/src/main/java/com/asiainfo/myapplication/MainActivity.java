@@ -3,7 +3,6 @@ package com.asiainfo.myapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.BinderThread;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,13 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.asiainfo.myapplication.animations.MainAnimationActivity;
-import com.asiainfo.myapplication.animations.MainAnimationActivity$$ViewBinder;
+import com.asiainfo.myapplication.customWebView.SimpleWebViewActivity;
 import com.asiainfo.myapplication.launchGuide.activity.LauchGuideActivity;
 import com.asiainfo.myapplication.mySubmit.MySubmitActivity;
 import com.asiainfo.myapplication.percentView.PercentLayoutActivity;
 import com.asiainfo.myapplication.pickView.PickViewActivity;
+import com.asiainfo.myapplication.util.JniUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -50,6 +51,8 @@ public class MainActivity extends BaseActivity{
         mainAdapter.setData(mainItems);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(mainAdapter);
+        JniUtils jniUtils = new JniUtils();
+        Toast.makeText(this, jniUtils.getString(), Toast.LENGTH_LONG).show();
     }
 
     public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerViewHolder>{
@@ -132,6 +135,9 @@ public class MainActivity extends BaseActivity{
                     break;
                 case 11:
                     transitionTo(MainAnimationActivity.class);
+                    break;
+                case 12:
+                    transitionTo(SimpleWebViewActivity.class);
                     break;
             }
         }
